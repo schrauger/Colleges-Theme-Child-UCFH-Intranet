@@ -28,16 +28,17 @@ $rp = new WP_Query( $args );
 if($rp->have_posts()) :
     while($rp->have_posts()) : $rp->the_post();
         echo "<div class='post'>";
-            echo "<div class='title'>";
+            echo "<div class='title'><a href='" . get_permalink() . "'>";
                 the_title(); // posttitle
-            echo "</div>";
-            echo "<div class='thumbnail'>";
+            echo "</a></div>";
+            echo "<div class='thumbnail'><a href='" . get_permalink() . "'>";
                 if ( has_post_thumbnail() ) {  // check if the post has a Post Thumbnail assigned to it.
                     the_post_thumbnail(); //display the thumbnail
                 }
-            echo "</div>";
+            echo "</a></div>";
             echo "<div class='excerpt'>";
                 the_excerpt(); // displays the excerpt
+                echo "<a class='readmore' href='" . get_permalink() .  "'> Read More</a>";
             echo "</div>";
         echo "</div>";
     endwhile;
