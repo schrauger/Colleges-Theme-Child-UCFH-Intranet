@@ -9,6 +9,9 @@
 // Custom shortcodes
 get_template_part( 'includes/shortcodes/functions' );
 
+// Custom taxonomies
+get_template_part( 'includes/taxonomies' );
+
 function include_child_styles() {
     wp_enqueue_style( 'colleges-theme-child-ucfh-intranet', get_stylesheet_uri() );
 }
