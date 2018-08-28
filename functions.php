@@ -6,4 +6,8 @@
  * Time: 12:56 PM
  */
 
+// Custom shortcodes
+get_template_part( 'includes/shortcodes/functions' );
+
+
 ?>
