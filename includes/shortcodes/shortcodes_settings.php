@@ -171,7 +171,7 @@ class ucf_com_shortcodes_settings {
 		/**
 		 * Include plugin.js in the tinymce way (which doesn't use wp_register_script but rather uses its own function)
 		 */
-		$plugin_array[ 'ucf_com_shortcodes_key' ] = get_template_directory_uri() . '/includes/shortcodes/plugin.js' ; // include the javascript for the button, located inside the current plugin folder
+		$plugin_array[ 'ucf_com_shortcodes_key' ] = get_stylesheet_directory_uri() . '/includes/shortcodes/plugin.js' ; // include the javascript for the button, located inside the current plugin folder
 		return $plugin_array;
 	}
 
