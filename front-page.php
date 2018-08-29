@@ -43,7 +43,7 @@ if ($rp->have_posts()) {
         echo "</div>";
         echo "</div>";
     }
-    echo "<div class='all-posts'><button><a href='" . get_post_type_archive_link( 'post' ) . "'>View all posts</a></button></div>";
+    echo "<div class='all-posts'><a class='button' href='" . get_post_type_archive_link( 'post' ) . "'>View all posts</a></div>";
     wp_reset_postdata(); // always always remember to reset postdata when using a custom query, very important
 }
 ?>
