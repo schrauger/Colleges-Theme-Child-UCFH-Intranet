@@ -17,7 +17,7 @@ function ucf_health_intranet_main_scripts() {
 	// the theme's main style.css file
 	wp_enqueue_style(
 		'colleges-theme-child-ucfh-intranet',
-		get_stylesheet_directory_uri(), // this will load the current theme's style.css file, not necessarily the parent theme style.
+		get_stylesheet_uri(), // this will load the current theme's style.css file, not necessarily the parent theme style.
 		false,
 		filemtime( get_stylesheet_directory() . DIRECTORY_SEPARATOR . 'style.css'),
 		false
