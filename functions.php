@@ -6,15 +6,13 @@
  * Time: 12:56 PM
  */
 
+// Javascript and css includes (for every page)
+get_template_part( 'includes/javascript-and-css' );
+
 // Custom shortcodes
 get_template_part( 'includes/shortcodes/functions' );
 
 // Custom taxonomies
 get_template_part( 'includes/taxonomies' );
-
-function include_child_styles() {
-    wp_enqueue_style( 'colleges-theme-child-ucfh-intranet', get_stylesheet_uri() );
-}
-add_action( 'wp_enqueue_scripts', 'include_child_styles' );
 
 ?>
