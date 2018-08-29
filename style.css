@@ -5,7 +5,7 @@
   Author:           Stephen Schrauger
   Author URI:       https://github.com/schrauger
   Template:         Colleges-Theme
-  Version:          1.0.7
+  Version:          1.0.8
 */
 
 .recent-posts {
@@ -35,4 +35,17 @@
 .post .thumbnail img {
 	width: 100%;
 	height: inherit;
+}
+
+.all-posts {
+	text-align: center;
+}
+
+.button {
+	background: #f7c100;
+	color: #222222;
+	font-size: 13px;
+	width: 206px;
+	padding: 20px 10px;
+	margin: 0 10px;
 }
