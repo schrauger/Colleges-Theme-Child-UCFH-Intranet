@@ -41,21 +41,13 @@ function ucf_health_intranet_main_scripts() {
 
 	wp_enqueue_script('google-svn-old-ie');
 	wp_script_add_data('google-svn-old-ie', 'conditional', 'lte IE 9');
-	// TypeKit. requires loading after being included.
-	wp_enqueue_script(
-		'ucf-health-typekit',
-		'//use.typekit.net/kga4teb.js',
-		array(),
-		null,
-		true
-	);
 
 	// Theme engine
 	// Note: engine.js enqueue requires TypeKit enqueue to be done first.
 	wp_enqueue_script(
-		'ucf_com_engine',
+		'ucfh_intranet_engine',
 		get_stylesheet_uri() . '/js/engine.js',
-		array( 'ucf-com-typekit' ),
+		array(),
 		filemtime( get_stylesheet_directory() . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'engine.js' ), // force cache invalidate if md5 changes
 		true // load in footer
 	);

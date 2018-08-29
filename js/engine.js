@@ -2,10 +2,6 @@
  * Created by stephen on 8/29/18.
  */
 
-// Load Typekit font handler.
-// Note: engine.js enqueue requires TypeKit enqueue to be done first.
-try{Typekit.load();}catch(e){}
-
 // Fancybox calls
 jQuery( document ).ready(function($) {
 
