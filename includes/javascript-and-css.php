@@ -19,7 +19,7 @@ function ucf_health_intranet_main_scripts() {
 		'colleges-theme-child-ucfh-intranet',
 		get_stylesheet_uri(), // this will load the current theme's style.css file, not necessarily the parent theme style.
 		false,
-		filemtime( get_stylesheet_directory().'/style.css'),
+		filemtime( get_stylesheet_directory() . DIRECTORY_SEPARATOR . 'style.css'),
 		false
 	);
 	
@@ -55,7 +55,7 @@ function ucf_health_intranet_main_scripts() {
 		'ucf_health_google_analytics',
 		get_template_directory_uri() . '/js/google-analytics.js',
 		array(),
-		filemtime( get_template_directory() . '/js/google-analytics.js'), // force cache invalidate if md5 changes
+		filemtime( get_template_directory() . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'google-analytics.js'), // force cache invalidate if md5 changes
 		false // load in header explicitly - google analytics says to load it in <head> or beginning of <body>
 	);
 
@@ -64,7 +64,7 @@ function ucf_health_intranet_main_scripts() {
 		'ucf_health_google_tag_manager',
 		get_template_directory_uri() . '/js/google-tag-manager.js',
 		array(),
-		filemtime( get_template_directory() . '/js/google-tag-manager.js'), // force cache invalidate if md5 changes
+		filemtime( get_template_directory(). DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'google-tag-manager.js'), // force cache invalidate if md5 changes
 		false // load in header explicitly - google tag manager says to load it in <head>
 	);
 
