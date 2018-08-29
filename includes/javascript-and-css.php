@@ -53,18 +53,18 @@ function ucf_health_intranet_main_scripts() {
 	// Google analytics
 	wp_enqueue_script(
 		'ucf_health_google_analytics',
-		get_template_directory_uri() . '/js/google-analytics.js',
+		get_stylesheet_uri() . '/js/google-analytics.js',
 		array(),
-		filemtime( get_template_directory() . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'google-analytics.js'), // force cache invalidate if md5 changes
+		filemtime( get_stylesheet_directory() . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'google-analytics.js'), // force cache invalidate if md5 changes
 		false // load in header explicitly - google analytics says to load it in <head> or beginning of <body>
 	);
 
 	// Google tag manager
 	wp_enqueue_script(
 		'ucf_health_google_tag_manager',
-		get_template_directory_uri() . '/js/google-tag-manager.js',
+		get_stylesheet_uri() . '/js/google-tag-manager.js',
 		array(),
-		filemtime( get_template_directory(). DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'google-tag-manager.js'), // force cache invalidate if md5 changes
+		filemtime( get_stylesheet_directory(). DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'google-tag-manager.js'), // force cache invalidate if md5 changes
 		false // load in header explicitly - google tag manager says to load it in <head>
 	);
 
@@ -100,9 +100,9 @@ function ucf_health_intranet_main_scripts() {
 	/*
 	wp_enqueue_script(
 		'ucf_UNIQUE_NAME',
-		get_template_directory_uri() . '/js/UNIQUE_NAME.js',
+		get_stylesheet_uri() . '/js/UNIQUE_NAME.js',
 		array('dependency'),
-		filemtime( get_template_directory() . '/js/UNIQUE_NAME.js'), // force cache invalidate if md5 changes
+		filemtime( get_stylesheet_directory() . '/js/UNIQUE_NAME.js'), // force cache invalidate if md5 changes
 		true // load in footer
 	);
 	*/
